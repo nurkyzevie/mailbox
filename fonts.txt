@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Knewave|Lato:400,700,900&display=swap');
+
+font-family: 'Lato', sans-serif;
+font-family: 'Knewave', cursive;
+font-family: 'Bree Serif', serif;

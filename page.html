@@ -1,0 +1,1473 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="utf-8" />
+	<title>Sally & Mark</title>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Knewave|Lato:400,700,900&display=swap');
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Lato', sans-serif;
+		}
+
+		html, body {
+			font-size: 30px;
+			overflow-x: hidden;
+		}
+
+		.section {
+			overflow: hidden;
+		}
+
+		.holder {
+			margin: 0 auto;
+			max-width: 1200px;
+		}
+
+		.menu {
+			float: right;
+			width: 50%;
+			text-align: center;
+			list-style: none inside;
+		}
+
+			.menu li {
+				float: left;
+				width: calc(100% / 7);
+			}
+
+			.menu a {
+				display: inline-block;
+				text-decoration: none;
+				height: 40px;
+				width: 100%;
+				line-height: 40px;
+				font-size: 0.6em;
+				font-weight: bold;
+				color: #333;
+			}
+
+				.menu a:after {
+					content: '';
+					display: block;
+					height: 10px;
+					opacity: 0;
+					background: url('img/arrows_1.png') center no-repeat;
+					background-size: contain;
+					transform: rotateY(90deg);
+					transition: all 200ms linear;
+				}
+
+
+				.menu a:hover:after {
+					animation: top-menu-animation 500ms linear normal;
+					transform: rotateY(0deg);
+					opacity: 1;
+				}
+
+		h2 {
+			text-align: center;
+			font-size: 2em;
+			font-family: 'Knewave', cursive;
+			font-weight: normal;
+			color: white;
+		}
+
+			h2:after {
+				content: '';
+				display: block;
+				height: 19px;
+				background: url('img/arrows_2.png') center no-repeat;
+				animation: h2 5s linear infinite;
+			}
+
+		@keyframes h2 {
+			from {
+				transform: rotateY(0);
+			}
+
+			10% {
+				transform: rotateY(0);
+			}
+
+			5% {
+				transform: rotateY(90deg);
+			}
+
+			15% {
+				transform: rotateY(-90deg);
+			}
+
+			20% {
+				transform: rotateY(0);
+			}
+		}
+
+		h3 {
+			font-size: 1em;
+			font-weight: normal;
+		}
+
+		.magenta {
+			background-position: left top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+			.magenta .wrapper {
+				padding: 6% 0;
+				background-color: rgba(151, 124, 245, 0.5);
+				background-image: url('img/edge_02.png'), url('img/edge_03.png');
+				background-position-x: center;
+				background-position-y: top, bottom;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+
+			.magenta h2 {
+				text-align: center;
+			}
+
+		.white h2 {
+			color: #333;
+		}
+
+			.white h2:after {
+				height: 26px;
+				background: url('img/arrows_3.png') center no-repeat;
+			}
+
+		.preambula {
+			margin: 3% 20%;
+			font-size: 0.6em;
+			line-height: 1.5em;
+			text-align: center;
+		}
+
+		.magenta .preambula {
+			color: white;
+		}
+
+		.white .preambula {
+			color: #333;
+		}
+
+
+		.magenta#block-7 {
+			background-image: url('img/photo_09.jpg')
+		}
+
+		.magenta#block-9 {
+			background-image: url('img/photo_10.jpg')
+		}
+
+		.magenta#block-13 {
+			background-image: url('img/photo_11.jpg')
+		}
+
+		.top-header:after, .menu:after, .story-entry:after, .timer:after, .friends-list:after, .friend-socials:after, .gallery:after, .geo:after, .journal:after, .gift:after, .map:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+		.top-left {
+			float: left;
+			width: 300px;
+		}
+
+		#block-1, #sally, #mark {
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+			#block-1 .holder, #sally .holder, #mark .holder {
+				min-height: 100vh;
+			}
+
+		#block-1 {
+			background-image: url('img/photo_01.jpg');
+			background-position: left top;
+		}
+
+			#block-1 .wrapper {
+				padding: 8% 5% 10% 60%;
+				text-align: center;
+				white-space: pre-line;
+				line-height: 2em;
+				color: rgba(0, 0, 0, 0.5);
+			}
+
+				#block-1 .wrapper * {
+					font-family: 'Knewave', cursive;
+					font-weight: normal;
+				}
+
+				#block-1 .wrapper > span:nth-child(1), #block-1 .wrapper > span:nth-child(3) {
+					font-size: 5em;
+				}
+
+		.save span, .date span {
+			display: inline-block;
+			animation: h1 8s linear infinite;
+		}
+
+			.save span:nth-child(1) {
+				animation-delay: 0.9s
+			}
+
+			.save span:nth-child(2) {
+				animation-delay: 0.6s
+			}
+
+			.save span:nth-child(3) {
+				animation-delay: 0.3s
+			}
+
+			.save span:nth-child(4) {
+				animation-delay: 0.2s
+			}
+
+			.date span:nth-child(1) {
+				animation-delay: 0.5s
+			}
+
+			.date span:nth-child(2) {
+				animation-delay: 0.4s
+			}
+
+			.date span:nth-child(3) {
+				animation-delay: 0.8s
+			}
+
+			.date span:nth-child(4) {
+				animation-delay: 0.1s
+			}
+
+
+		@keyframes h1 {
+			from {
+				transform: rotateY(0);
+			}
+
+			2% {
+				transform: rotateY(180deg);
+			}
+
+			4% {
+				transform: rotateY(0);
+			}
+
+			6% {
+				transform: rotateY(-180deg);
+			}
+
+			8% {
+				transform: rotateY(0);
+			}
+		}
+
+		#sally *, #mark * {
+			margin-bottom: 1em;
+		}
+
+		#sally .preambula, #mark .preambula {
+			margin: 0 0 1em 0;
+			color: white;
+			text-align: justify;
+		}
+
+			#sally .preambula:after, #mark .preambula:after {
+				content: '';
+				display: block;
+				height: 80px;
+				width: 210px;
+				margin-top: 2em;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+
+		#sally {
+			background-image: url('img/photo_02.jpg');
+			background-position: left top;
+		}
+
+			#sally .wrapper {
+				padding: 5% 50% 0 5%;
+			}
+
+			#sally .preambula:after {
+				background-image: url('img/sign_01.png');
+			}
+
+		#mark {
+			background-image: url('img/edge_01.png'), url('img/photo_03.jpg');
+			background-position: center bottom, left top;
+			background-size: contain, cover;
+			background-attachment: scroll, fixed;
+		}
+
+			#mark .wrapper {
+				padding: 5% 5% 6% 50%;
+			}
+
+			#mark .preambula:after {
+				background-image: url('img/sign_02.png');
+			}
+
+		#story h2 {
+			text-align: center;
+			color: #000;
+		}
+
+		.story-entry {
+			color: #333;
+		}
+
+		.story-data h3 {
+			font-family: 'Bree Serif', serif;
+			font-size: 1.4em;
+		}
+
+		.story-data time {
+			display: block;
+			font-family: 'Knewave', cursive;
+			font-size: 0.6em;
+			margin-bottom: 1em;
+		}
+
+		.story-data h4 {
+			font-size: 0.9em;
+			font-weight: normal;
+			margin-bottom: 0.5em;
+		}
+
+		.story-data p {
+			font-size: 0.5em;
+			line-height: 1.5em;
+			color: #666;
+		}
+
+		.story-photo .story-content {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 100%;
+			border: 0.1em solid #e4d4fb;
+		}
+
+		.photo-action, .zoom {
+			height: 100%;
+			width: 100%;
+			display: block;
+			transition: all 300ms linear;
+		}
+
+		.photo-action {
+			border: 0.1em solid #e4d4fb;
+			margin: -20px 0 0 0;
+		}
+
+		.zoom {
+			opacity: 0;
+			background: url('img/zoom.png') center no-repeat;
+		}
+
+		.story-entry:nth-child(odd) .story-photo, .story-entry:nth-child(odd) .simpa, .story-entry:nth-child(even) .story-data {
+			float: left;
+			text-align: right;
+		}
+
+		.story-entry:nth-child(even) .story-photo, .story-entry:nth-child(even) .simpa, .story-entry:nth-child(odd) .story-data {
+			float: right;
+			text-align: left;
+		}
+
+		.story-entry:nth-child(odd) .photo-action {
+			margin-left: -20px;
+		}
+
+		.story-entry:nth-child(even) .photo-action {
+			margin-left: 20px;
+		}
+
+		#story-1 .simpa:after {
+			background-image: url('img/simpa_02.png');
+		}
+
+		#story-1 .story-photo .story-content {
+			background-image: url('img/photo_04.jpg')
+		}
+
+		#story-2 .simpa:after {
+			background-image: url('img/simpa_03.png');
+		}
+
+		#story-2 .story-photo .story-content {
+			background-image: url('img/photo_05.jpg')
+		}
+
+		#story-3 .simpa:after {
+			background-image: url('img/simpa_04.png');
+		}
+
+		#story-3 .story-photo .story-content {
+			background-image: url('img/photo_06.jpg')
+		}
+
+		#story-4 .simpa:after {
+			background-image: url('img/simpa_05.png');
+		}
+
+		#story-4 .story-photo .story-content {
+			background-image: url('img/photo_07.jpg');
+		}
+
+		.simpa {
+			display: block;
+			width: 100px;
+			height: 400px;
+			overflow: hidden;
+			cursor: default;
+		}
+
+			.simpa:before {
+				content: '';
+				display: block;
+				height: 400px;
+				width: 1px;
+				border: none;
+				border-left: 1px dotted #e4d4fb;
+				margin-left: 50px;
+			}
+
+			.simpa:after {
+				content: '';
+				display: block;
+				height: 100px;
+				width: 100px;
+				background-color: white;
+				background-position: center;
+				background-repeat: no-repeat;
+				margin-top: -250px;
+				cursor: pointer;
+				transition: transform 300ms linear;
+			}
+
+			.simpa:hover:after {
+				transform: rotate(360deg);
+			}
+
+		.story-photo, .story-data {
+			padding: 2%;
+			width: calc(50% - 50px);
+			height: 400px;
+			perspective: 2000px;
+		}
+
+		.story-content {
+			transform-style: preserve-3d;
+			transition: all 500ms ease;
+			width: 100%;
+		}
+
+		.story-entry:nth-child(odd) .story-content, .story-entry:nth-child(even) .story-data .story-content {
+			transform-origin: right center;
+			transform: rotateY(-80deg);
+		}
+
+		.story-entry:nth-child(even) .story-content, .story-entry:nth-child(odd) .story-data .story-content {
+			transform-origin: left center;
+			transform: rotateY(80deg);
+		}
+
+		.story-entry:nth-child(odd):not(:target):hover .story-content, .story-entry:nth-child(even):not(:target):hover .story-data .story-content {
+			animation: story-animation-right 2s linear infinite;
+		}
+
+		.story-entry:nth-child(even):not(:target):hover .story-content, .story-entry:nth-child(odd):not(:target):hover .story-data .story-content {
+			animation: story-animation-left 2s linear infinite;
+		}
+
+		.story-entry:nth-child(odd):target .story-content, .story-entry:nth-child(even):target .story-data .story-content, .story-entry:nth-child(even):target .story-content, .story-entry:nth-child(odd):target .story-data .story-content {
+			animation: story-animation 1s linear forwards;
+		}
+
+		.story-entry:target .photo-action:hover {
+			margin: 0;
+			cursor: pointer;
+		}
+
+		.story-entry:target .zoom:hover {
+			opacity: 1;
+			background-color: rgba(243, 229, 245, 0.5)
+		}
+
+		@keyframes story-animation {
+			to {
+				transform: rotateY(0);
+			}
+		}
+
+		@keyframes story-animation-left {
+			from {
+				transform: rotateY(80deg);
+			}
+
+			50% {
+				transform: rotateY(45deg);
+			}
+
+			to {
+				transform: rotateY(80deg);
+			}
+		}
+
+		@keyframes story-animation-right {
+			from {
+				transform: rotateY(-80deg);
+			}
+
+			50% {
+				transform: rotateY(-45deg);
+			}
+
+			to {
+				transform: rotateY(-80deg);
+			}
+		}
+
+		.magenta * {
+			text-align: center;
+			color: white;
+			margin: 0 auto;
+		}
+
+		.magenta p {
+			max-width: 42%;
+			font-size: 0.6em;
+			padding: 30px;
+		}
+
+		#couple-magenta-1 {
+			background: url('img/photo_08.jpg') no-repeat center;
+			background-position: center top;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+		#couple-magenta-2 {
+			background: url('img/photo_09.jpg') no-repeat center;
+			background-position: center top;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+		#couple-magenta-3 {
+			background: url('img/photo_10.jpg') no-repeat center;
+			background-position: center top;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+		#couple-magenta-4 {
+			background: url('img/photo_11.jpg') no-repeat center;
+			background-position: center top;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+
+		.magenta .wrapper {
+			background: url('img/edge_02.png'), url('img/edge_03.png');
+			background-color: rgba(151,124,245,0.5);
+			background-size: contain;
+			background-position-y: top, bottom;
+			background-repeat: no-repeat;
+			padding: 6% 0;
+		}
+
+		.magenta #clock {
+			margin-top: 30px;
+			width: 320px;
+			height: 320px;
+			background: url('img/clock.svg'), rgba(250,250,250,0.3);
+			border-radius: 50%;
+		}
+
+		@keyframes clock-move {
+			100% {
+				transform: rotateZ(360deg);
+			}
+		}
+
+		#minute, #hour, #second {
+			display: inline-block;
+			margin-left: -11.5px;
+			margin-bottom: 6px;
+			animation: clock-move infinite linear;
+			transform-origin: center bottom;
+			box-shadow: 0 0 3px rgba(0,0,0,0.3);
+		}
+
+
+		#clock #minute {
+			height: 100px;
+			width: 5px;
+			animation-duration: 3600s;
+			border-bottom-left-radius: 2px;
+			border-bottom-right-radius: 2px;
+			background-color: #000;
+		}
+
+		#clock #hour {
+			height: 60px;
+			width: 8px;
+			animation-duration: 43200s;
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+			background-color: #000;
+		}
+
+		#clock #second {
+			height: 90px;
+			width: 2px;
+			animation-duration: 60s;
+			border-bottom-left-radius: 1px;
+			border-bottom-right-radius: 1px;
+			background-color: #f00;
+		}
+
+		#clock-center {
+			display: inline-block;
+			margin: 148px auto 0 auto;
+			width: 12px;
+			height: 12px;
+			background-color: #000;
+			border-radius: 50%;
+			transform-origin: center;
+		}
+
+		.gift {
+			margin: 3% auto;
+			width: 70%;
+		}
+
+			.gift div {
+				float: left;
+				padding: 2% 1%;
+				width: calc((100% - 2em) / 3);
+				border: 0.1em solid rgba(151,124,245,1);
+				transition: transform 200ms linear;
+				cursor: pointer;
+				max-width: 900px;
+			}
+
+				.gift div + div {
+					margin-left: 1em;
+				}
+
+			.gift img {
+				display: block;
+				width: 100%;
+			}
+
+			.gift div:hover {
+				transform: scale(1.1);
+			}
+
+
+		.gallery {
+			list-style: none inside;
+		}
+
+			.gallery .gallery-image {
+				float: left;
+				width: 25%;
+				padding: 1.1%;
+			}
+
+				.gallery .gallery-image img {
+					width: 100%;
+				}
+
+					.gallery .gallery-image img:hover {
+						animation: gallery 1s linear forwards;
+					}
+
+		@keyframes gallery {
+			0% {
+				transform: rotateX(0) scale(1);
+			}
+
+			25% {
+				transform: rotateZ(-10deg) scale(1.2);
+			}
+
+			50% {
+				transform: rotateZ(0) scale(1.4);
+			}
+
+			75% {
+				transform: rotateZ(10deg) scale(1.6);
+			}
+
+			100% {
+				transform: rotateZ(0) scale(1.8);
+			}
+		}
+
+
+		ul {
+			list-style: none inside;
+		}
+
+
+		#our-best {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.friend-entry {
+			margin: 60px auto;
+		}
+
+		.friend {
+			overflow: hidden;
+			background-size: 110%;
+			background-position: 50% 0;
+			background-repeat: no-repeat;
+			transition: background-size 200ms linear;
+			width: calc(100% / 3);
+			text-align: center;
+			transition: all 200ms linear;
+			border: 10px solid white;
+		}
+
+			.friend:nth-child(-n+2) {
+				float: left;
+			}
+
+			.friend:hover {
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			}
+
+			.friend:hover {
+				background-size: 100%;
+			}
+
+				.friend:hover .tittle {
+					padding-top: 60%;
+					padding-bottom: 10%;
+					background-color: rgba(243, 229, 245, 0.5);
+				}
+
+				.friend:hover .friend-socials {
+					margin-bottom: 0;
+				}
+
+				.friend:hover .position {
+					margin-bottom: 10px;
+				}
+
+				.friend:hover .name {
+					animation: friend-name 500ms linear 1;
+				}
+
+		.tittle {
+			padding-top: 80%;
+			padding-bottom: 0px;
+			transition: all 300ms linear;
+		}
+
+			.tittle * {
+				display: block;
+				transition: all 300ms linear;
+			}
+
+		.name {
+			overflow: hidden;
+			background-color: white;
+			font-weight: 900;
+			font-size: 0.7em;
+			line-height: 1.5em;
+			padding-top: 0.5em;
+			white-space: nowrap;
+			text-align: center;
+			letter-spacing: 0.1em;
+		}
+
+		.position {
+			padding-bottom: 0.5em;
+			margin-bottom: 30px;
+			background-color: white;
+			color: #333;
+			font-size: 0.6em;
+			line-height: 30px;
+		}
+
+		#amber {
+			background-image: url('img/friend_01.jpg');
+		}
+
+		#lawrence {
+			background-image: url('img/friend_02.jpg');
+		}
+
+		#carolyn {
+			background-image: url('img/friend_03.jpg');
+		}
+
+		.friend-socials {
+			display: table;
+			margin: 0 auto;
+			margin-bottom: -50px;
+		}
+
+			.friend-socials li {
+				float: left;
+			}
+
+				.friend-socials li + li {
+					margin-left: 10px;
+				}
+
+				.friend-socials li:before {
+					content: '';
+					display: block;
+					height: 20px;
+					width: 20px;
+					background-image: url('img/sprite.png');
+					background-repeat: no-repeat;
+					cursor: pointer;
+				}
+
+				.friend-socials li:hover:before {
+					animation: socials 2s linear infinite;
+				}
+
+				.friend-socials li.facebook:before {
+					background-position: 0 0;
+				}
+
+				.friend-socials li.twitter:before {
+					background-position: -20px 0;
+				}
+
+				.friend-socials li.google:before {
+					background-position: -40px 0;
+				}
+
+		@keyframes socials {
+			from, to {
+				transform: rotateY(0)
+			}
+
+			50% {
+				transform: rotateY(180deg)
+			}
+		}
+
+		@keyframes friend-name {
+			from, to {
+				letter-spacing: 0.1em;
+			}
+
+			50% {
+				letter-spacing: 0.2em;
+			}
+		}
+
+		#amber {
+			background-image: url('img/friend_01.jpg');
+		}
+
+		#lawrence {
+			background-image: url('img/friend_02.jpg');
+		}
+
+		#carolyne {
+			background-image: url('img/friend_03.jpg');
+		}
+
+
+		.map, .map li {
+			display: block;
+		}
+
+			.map ul {
+				box-shadow: 25px 50px rgba(0, 0, 0, 0.1);
+			}
+
+		.map {
+			margin: 4% 4% 2% 4%;
+			transform-style: preserve-3d;
+			perspective: 1920px;
+			perspective-origin: center top;
+		}
+
+			.map li {
+				float: left;
+				width: calc(100% / 6);
+				height: 0;
+				padding-bottom: calc(100% / 6);
+				background-size: cover;
+				background-image: url('img/map.png');
+				transition: transform 500ms ease-out, box-shadow 200ms linear 500ms;
+				transform: rotateX(40deg);
+				box-shadow: -20px 0 50px rgba(0, 0, 0, 0.3);
+			}
+
+				.map li:nth-child(n+2) {
+				}
+
+				.map li:nth-child(1) {
+					background-position-x: 0;
+				}
+
+				.map li:nth-child(2) {
+					background-position-x: 20%;
+				}
+
+				.map li:nth-child(3) {
+					background-position-x: 40%;
+				}
+
+				.map li:nth-child(4) {
+					background-position-x: 60%;
+				}
+
+				.map li:nth-child(5) {
+					background-position-x: 80%;
+				}
+
+				.map li:nth-child(6) {
+					background-position-x: 100%;
+				}
+
+
+				.map li:nth-child(odd) {
+					transform: skewY(-20deg);
+					box-shadow: none;
+				}
+
+				.map li:nth-child(even) {
+					transform: skewY(20deg);
+				}
+
+			.map:hover li {
+				transform: skewY(0) rotateX(0);
+			}
+
+			.map:hover :nth-child(odd) {
+				box-shadow: -20px 0 50px rgba(0, 0, 0, 0.3);
+			}
+
+		#find-us .wrapper {
+			padding: 1% 0 6% 0;
+			background-color: rgba(151, 124, 245, 0.5);
+			background-image: url('img/edge_03.png');
+			background-position-x: center;
+			background-position-y: bottom;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		.geo .places li {
+			overflow: hidden;
+			float: left;
+			width: calc(100% / 3);
+			background-size: contain, cover;
+			background-position-y: top, center;
+			background-repeat: no-repeat;
+		}
+
+		.geo li:nth-child(1) {
+			background-image: url('img/edge_02.png'),url('img/church.jpg');
+		}
+
+		.geo li:nth-child(2) {
+			background-image: url('img/edge_02.png'), url('img/restaurant.jpg');
+		}
+
+		.geo li:nth-child(3) {
+			background-image: url('img/edge_02.png'),url('img/hotel.jpg');
+		}
+
+		.geo .places-action {
+			padding: 10%;
+			color: white;
+			text-align: center;
+			cursor: pointer;
+			background-image: url('img/edge_02.png');
+			background-size: contain;
+			background-position-y: top;
+			background-repeat: no-repeat;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+
+		.geo, .places-action {
+			transition: all 200ms linear;
+		}
+
+			.places-action:hover {
+				background-color: transparent;
+				transform: scale(2);
+				opacity: 0;
+			}
+
+		.places {
+			opacity: 1;
+		}
+
+			.places h3 {
+				text-transform: uppercase;
+				font-size: 1em;
+				font-weight: 900;
+				line-height: 2em;
+			}
+
+			.places span {
+				margin: 0;
+				white-space: pre-line;
+				font-size: 0.6em;
+			}
+
+		.journal {
+			margin-top: 1em;
+			color: #333;
+		}
+
+		.journal-entry {
+			float: left;
+			width: calc(100% / 3);
+			padding: 1%;
+		}
+
+		.journal-entry {
+			display: block;
+		}
+
+			.journal-entry:hover .journal-image {
+				border-color: rgba(151, 124, 245, 0.5);
+			}
+
+			.journal-entry:hover img {
+				transform: scale(1.2)
+			}
+
+		#journal h4 {
+			font-family: 'Bree Serif', serif;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			font-weight: normal;
+		}
+
+		#journal time {
+			font-size: 0.45em;
+			color: #999;
+		}
+
+		#journal p {
+			height: 6em;
+			overflow: hidden;
+			font-size: 0.5em;
+			color: #666;
+			line-height: 1.5em;
+		}
+
+		.button, .journal-image, .journal-image img {
+			transition: all 200ms linear;
+		}
+
+		.button {
+			display: inline-block;
+			padding: 0.75em 1.5em;
+			font-size: 0.5em;
+			border: 0.1em solid rgb(151, 124, 245);
+			color: rgb(151, 124, 245);
+			cursor: pointer;
+		}
+
+			.button:hover {
+				background-color: rgb(151, 124, 245);
+				color: white;
+			}
+
+		.journal-image {
+			overflow: hidden;
+			border: 0.1em solid rgba(151, 124, 245, 0);
+		}
+
+			.journal-image img {
+				width: 100%;
+			}
+	</style>
+</head>
+<body>
+	<main id="top">
+
+		<section class="section" id="block-1">
+			<div class="holder">
+				<div class="top-header">
+					<div class="top-left">
+					</div>
+					<ul class="menu">
+						<li><a href="#sally">Sally</a></li>
+						<li><a href="#mark">Mark</a></li>
+						<li><a href="#story">Story</a></li>
+						<li><a href="#gift">Gift</a></li>
+						<li><a href="#gallery">Gallery</a></li>
+						<li><a href="#friends">Friends</a></li>
+						<li><a href="#journal">Journal</a></li>
+					</ul>
+				</div>
+				<div class="wrapper">
+					<span class="save"><span>S</span><span>a</span><span>v</span><span>e</span></span>
+					<span>the</span>
+					<span class="date"><span>D</span><span>a</span><span>t</span><span>e</span></span>
+					<time>12.09.2019</time>
+					<span>Sally & Mark</span>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="sally">
+			<div class="holder">
+				<div class="wrapper">
+					<h2>Sally Craft</h2>
+					<p class="preambula">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="mark">
+			<div class="holder">
+				<div class="wrapper">
+					<h2>Mark Holts</h2>
+					<p class="preambula">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="story">
+			<div class="holder">
+				<h2>Our
+            <img src="img/simpa_01.png" height="100" />
+				Story</h2>
+				<ul class="our-story">
+					<li class="story-entry" id="story-1">
+						<div class="story-photo">
+							<div class="story-content">
+								<div class="photo-action">
+									<div class="zoom"></div>
+								</div>
+							</div>
+						</div>
+						<a class="simpa" href="#story-1"></a>
+						<div class="story-data">
+							<div class="story-content">
+								<h3>OUR FIRST MET</h3>
+								<time>23 Sept 2013</time>
+								<h4>That day changed everything</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+						</div>
+					</li>
+					<li class="story-entry" id="story-2">
+						<div class="story-photo">
+							<div class="story-content">
+								<div class="photo-action">
+									<div class="zoom"></div>
+								</div>
+							</div>
+						</div>
+						<a class="simpa" href="#story-2"></a>
+						<div class="story-data">
+							<div class="story-content">
+								<h3>OUR FIRST DATING</h3>
+								<time>28 Feb 2013</time>
+								<h4>That was so wonderful</h4>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+							</div>
+						</div>
+					</li>
+					<li class="story-entry" id="story-3">
+						<div class="story-photo">
+							<div class="story-content">
+								<div class="photo-action">
+									<div class="zoom"></div>
+								</div>
+							</div>
+						</div>
+						<a class="simpa" href="#story-3"></a>
+						<div class="story-data">
+							<div class="story-content">
+								<h3>HOW WE PROPOSED</h3>
+								<time>16 Nov 2016</time>
+								<h4>That day changed everything</h4>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+							</div>
+						</div>
+					</li>
+					<li class="story-entry" id="story-4">
+						<div class="story-photo">
+							<div class="story-content">
+								<div class="photo-action">
+									<div class="zoom"></div>
+								</div>
+							</div>
+						</div>
+						<a class="simpa" href="#story-4"></a>
+						<div class="story-data">
+							<div class="story-content">
+								<h3>NOW WE TOGETHER</h3>
+								<time>18 Oct 2016</time>
+								<h4>We're waiting for the best</h4>
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="magenta" id="couple-magenta-1">
+			<div class="wrapper">
+				<header>
+					<h2>Don't miss it!</h2>
+				</header>
+				<div id="clock">
+					<div id="clock-center"></div>
+					<div id="second"></div>
+					<div id="minute"></div>
+					<div id="hour"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="white">
+			<div class="holder">
+				<h2>Gift Registry</h2>
+				<div></div>
+				<p class="preambula">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.</p>
+				<div class="gift">
+					<div>
+						<img src="img/gift_01.png" />
+					</div>
+					<div>
+						<img src="img/gift_02.png" />
+					</div>
+					<div>
+						<img src="img/gift_03.png" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="magenta" id="couple-magenta-2">
+			<div class="wrapper">
+				<header>
+					<h2>Are you attending?</h2>
+				</header>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor.
+Ut vel turpis accumsan, efficitur dolor fermentum, tincidunt metus.
+				</p>
+			</div>
+		</section>
+
+		<section class="white">
+			<div class="holder">
+				<h2>Our Gallery</h2>
+				<ul class="gallery">
+					<li class="gallery-image">
+						<img src="img/photo_04.jpg" />
+					</li>
+					<li class="gallery-image">
+						<img src="img/photo_11.jpg" />
+					</li>
+					<li class="gallery-image">
+						<img src="img/photo_05.jpg" />
+					</li>
+					<li class="gallery-image">
+						<img src="img/photo_10.jpg" />
+					</li>
+					<li class="gallery-image">
+						<img src="img/photo_08.jpg" />
+					</li>
+					<li class="gallery-image">
+						<img src="img/photo_12.jpg" />
+					</li>
+					<li class="gallery-image">
+						<img src="img/photo_07.jpg" />
+					</li>
+					<li class="gallery-image">
+						<img src="img/photo_09.jpg" />
+					</li>
+					<li class="gallery-image">
+						<img src="img/photo_13.jpg" />
+					</li>
+					<li class="gallery-image">
+						<img src="img/photo_03.jpg" />
+					</li>
+					<li class="gallery-image">
+						<img src="img/photo_14.jpg" />
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="magenta" id="couple-magenta-3">
+			<div class="wrapper">
+				<h2>“The best gift is your patecipation”</h2>
+				<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great.</p>
+			</div>
+		</section>
+
+		<section class="white" id="our-best">
+			<div class="holder">
+				<h2>Our best friend</h2>
+				<p class="preambula">Our best friends who will help us and we highly appreciate that! Thanks for being there with us! We feel your help within the time and wish it lasts forever...</p>
+				<ul class="friend-entry">
+					<li class="friend" id="amber">
+						<div class="friend-info">
+							<div class="tittle">
+								<span class="name">AMBER RICHARDS</span>
+								<span class="position">Groomsman</span>
+								<ul class="friend-socials">
+									<li class="facebook"></li>
+									<li class="twitter"></li>
+									<li class="google"></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="friend" id="lawrence">
+						<div class="friend-info">
+							<div class="tittle">
+								<span class="name">LAWRENCE STEPHENS</span>
+								<span class="position">Bridesmaid</span>
+								<ul class="friend-socials">
+									<li class="facebook"></li>
+									<li class="twitter"></li>
+									<li class="google"></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="friend" id="carolyn">
+						<div class="friend-info">
+							<div class="tittle">
+								<span class="name">CAROLYN MORENO</span>
+								<span class="position">Bridesmaid</span>
+								<ul class="friend-socials">
+									<li class="facebook"></li>
+									<li class="twitter"></li>
+									<li class="google"></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="geo">
+			<ul class="places">
+				<li>
+					<div class="places-action">
+						<h3>Church</h3>
+						<span>790 3rd Street Lockport,
+NY 14094</span>
+					</div>
+				</li>
+				<li>
+					<div class="places-action">
+						<h3>Restaurant</h3>
+						<span>1628 Orchard Street Saint Cloud,
+MN 56301</span>
+					</div>
+				</li>
+				<li>
+					<div class="places-action">
+						<h3>Hotel</h3>
+						<span>1285 7th Avenue Paducah,
+KY 42001</span>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<section class="magenta" id="find-us">
+			<div class="wrapper">
+				<h2>Find us here</h2>
+				<ul class="map">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="white" id="journal">
+			<div class="holder">
+				<h2>Wedding Journal</h2>
+				<ul class="journal">
+					<li class="journal-entry">
+						<div class="journal-image">
+							<img src="img/photo_12.jpg" />
+						</div>
+						<h4>Planning honeymoon</h4>
+						<time>10 December</time>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa similique porro officiis nobis nulla quidem nihil iste veniam ut sit, maiores.</p>
+						<span class="button">Read more</span>
+					</li>
+					<li class="journal-entry">
+						<div class="journal-image">
+							<img src="img/photo_05.jpg" />
+						</div>
+						<h4>Surprises for guests</h4>
+						<time>8 December</time>
+						<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+						<span class="button">Read more</span>
+					</li>
+					<li class="journal-entry">
+						<div class="journal-image">
+							<img src="img/photo_03.jpg" />
+						</div>
+						<h4>Bachelor party!</h4>
+						<time>1 December</time>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.</p>
+						<span class="button">Read more</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="magenta" id="couple-magenta-4">
+			<div class="wrapper">
+				<h2>Be our guest!</h2>
+				<p>
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+				</p>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
